@@ -6,8 +6,8 @@ This shows how my interpretation is on how the data is saved in the irg file sav
 
 The Infiray software can also open the files from the Vevor camera.
 
-What I believe are the differences between the Infiray C200 Pro and Vevor SC240M
-No USB live feed to computer software possible on SC240M
+What I believe are the differences between the Infiray C200 Pro and Vevor SC240M:
+- No USB live feed to computer software possible on SC240M
 
 ## Tested cameras:
 
