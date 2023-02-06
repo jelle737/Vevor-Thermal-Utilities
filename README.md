@@ -13,21 +13,33 @@ The data in the .irg file is distributed in the following blocks:
 | 126 | Thermal header Embedded data | See next table |
 | 240x180 | Historgram corrected preview | 1 bytes per pixel |
 | 240x180x2 | Raw Thermal data | 2 bytes per pixel in x10°K |
+| Remainder | jpg color image | encoded as standard jpg, resulution identical to thermal camera (240x180) |
 
 The embedded data is as shown in the next table. All is stored in little endian:
 
 | Bytes | Description | Type | Notes |
 | --- | --- | --- | --- |
-| 0 | Temperature unit | uint8 | Enum: 0:ºC, 1:ºF |
-| 1 - 2 | Maximum temp. | int16 | Scaled by 10 |
-| 3 - 4 | Minimum temp. | int16 | Scaled by 10 |
-| 5 - 6 | Unknown | int16 | Always 255/0 |
-| 7 - 8 | Center temp. | int16 | Scaled by 10 |
-| 9 | Emissivity | uint8 | Scaled by 100 |
-| 10 - 13 | Unknown | uint16 | Always 6/0/0/0 |
-| 14 - 15 | Max. temp. pos X | uint16 | |
-| 16 - 17 | Max. temp. pos Y | uint16 | |
-| 18 - 19 | Min. temp. pos X | uint16 | |
-| 20 - 21 | Min. temp. pos Y | uint16 | |
-| 22 - 23 | Center temp. pos X | uint16 | |
-| 24 - 25 | Center temp. pos Y | uint16 | |
+| 0 - 3 | 186 171 128   0 | uint32 | ? |
+| 4 - 7 | 240x180 | int32 |  |
+| 8 - 9 | 240 | int16 |  |
+| 10 - 11 | 180 | int16 |  |
+| 12 | 0 | int8 |  |
+| 13 - 16 | 240x180 | int32 |  |
+| 17 - 18 | 240 | int16 |  |
+| 19 - 20 | 180 | int16 |  |
+| 21 | 0 | int8 |  |
+| 22 - 25 | 240x180 | int32 |  |
+| 16 - 27 | 240 | int16 |  |
+| 28 - 29 | 180 | int16 |  |
+| 30 - 33 | Emissivity | uint32 | Scaled by 1000 |
+| 34 - 37 | Reflective Temperature | uint32 | Scaled by 1000 |
+| 38 - 41 | Ambient Temperature | uint32 | Scaled by 1000 |
+| 42 - 45 | Distance | uint32 | Scaled by 1000 |
+| 46 - 49 | 4000 | uint32 | |
+| 50 - 51 | Transmissivity | uint32 | Scaled by 1000 |
+| 52 - 55 | 0 | uint32 | |
+| 56 - 59 | 10000 | uint32 | |
+| .. | .. | .. | |
+| 74 | Temperature unit | uint8 | Enum: 0:ºC, 1:ºF |
+| .. | .. | .. | |
+
