@@ -1,10 +1,22 @@
 # Vevor-Thermal-Utilities
-Small script to extract raw temperature data from Vevor and Infiray thermal camera images
+Small script to extract raw temperature data from Vevor SC240M (and likely Infiray C200 Pro) thermal camera images
+![Extraction examples](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/docs/img/output_example.png)
+
+This shows how my interpretation is on how the data is saved in the irg file saved on the thermal camera. As I was curious what was in this file and if there was raw temperature information. I found there is raw temperature information.
+
+The Infiray software can also open the files from the Vevor camera.
+
+What I believe are the differences between the Infiray C200 Pro and Vevor SC240M
+No USB live feed to computer software possible on SC240M
+
+## Tested cameras:
+
+- Vevor SC240M firmware V1.4.4 (102)
 
 ## Embedded data format
 
-In this section the format used by Vevor thermal cameras, firmware vxxx, is explained.
 When an image is taken two files are generated. One .irg, that contains all thermal data, and one .jpg with the dispay as shown on the camera during capture. 
+![Extraction examples](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/examples/samples/230201152910.jpg)
 
 The data in the .irg file is distributed in the following blocks: 
 
@@ -19,7 +31,7 @@ The embedded data is as shown in the next table. All is stored in little endian:
 
 | Bytes | Description | Type | Notes |
 | --- | --- | --- | --- |
-| 0 - 3 | 186 171 128   0 | uint32 | ? |
+| 0 - 3 | 186 171 128   0 | uint32 | |
 | 4 - 7 | 240x180 | int32 |  |
 | 8 - 9 | 240 | int16 |  |
 | 10 - 11 | 180 | int16 |  |
