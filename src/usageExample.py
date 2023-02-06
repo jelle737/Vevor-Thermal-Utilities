@@ -4,9 +4,6 @@ from pathlib import Path
 from matplotlib import pyplot as plt
 import os
 
-def KtoC(x):
-    return np.add(np.multiply(x,0.0001),-273.15)
-
 filepath_irg = "examples/samples\\230201152910.irg"
 
 filename, file_extension = os.path.splitext(filepath_irg)
