@@ -53,6 +53,6 @@ The embedded data is as shown in the next table. All is stored in little endian:
 | 52 - 55 | 0 | uint32 | |
 | 56 - 59 | 10000 | uint32 | |
 | .. | .. | .. | |
-| 74 | Temperature unit | uint8 | Enum: 0:ºC, 1:ºF |
+| 74 | Temperature unit | uint8 | Enum: 0:°C, 1:°K, 2:°F |
 | .. | .. | .. | |
 
