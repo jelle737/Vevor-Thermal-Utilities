@@ -15,8 +15,9 @@ No USB live feed to computer software possible on SC240M
 
 ## Embedded data format
 
-When an image is taken two files are generated. One .irg, that contains all thermal data, and one .jpg with the dispay as shown on the camera during capture. 
-![Extraction examples](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/examples/samples/230201152910.jpg)
+When an image is taken two files are generated. One .irg, that contains all thermal data, and one .jpg with the dispay as shown on the camera during capture.
+
+![Camera Preview](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/examples/samples/230201152910.jpg)
 
 The data in the .irg file is distributed in the following blocks: 
 
