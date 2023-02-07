@@ -1,6 +1,6 @@
 # Vevor-Thermal-Utilities
 Small script to extract raw temperature data from Vevor SC240M (and likely Infiray C200 Pro) thermal camera images
-![Extraction examples](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/docs/img/output_example.png)
+![Extraction examples](https://raw.githubusercontent.com/jelle737/Vevor-Thermal-Utilities/main/docs/img/output_example.png)
 
 This shows how my interpretation is on how the data is saved in the irg file saved on the thermal camera. As I was curious what was in this file and if there was raw temperature information. I found there is raw temperature information.
 
@@ -17,7 +17,7 @@ What I believe are the differences between the Infiray C200 Pro and Vevor SC240M
 
 When an image is taken two files are generated. One .irg, that contains all thermal data, and one .jpg with the dispay as shown on the camera during capture.
 
-![Camera Preview](https://github.com/jelle737/Vevor-Thermal-Utilities/raw/main/examples/samples/230201152910.jpg)
+![Camera Preview](https://raw.githubusercontent.com/jelle737/Vevor-Thermal-Utilities/main/examples/samples/230201152910.jpg)
 
 The data in the .irg file is distributed in the following blocks: 
 
